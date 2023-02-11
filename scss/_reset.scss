@@ -1,0 +1,31 @@
+// google fonts link
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
+
+@import './variables';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+html {
+  font-size: 55%;
+  overflow-x: hidden;
+}
+
+@media (min-width:$tablet) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media (min-width:$desktop) {
+  html {
+    font-size: 62.5%;
+  }
+}

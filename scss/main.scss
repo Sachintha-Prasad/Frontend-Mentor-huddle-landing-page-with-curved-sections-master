@@ -1,0 +1,312 @@
+@import "./reset";
+@import "./variables";
+@import "./mixin";
+@import "./components";
+
+.main-container {
+
+  // header starts here 
+  header {
+    @include flex(column, center, center, 12rem);
+    padding: 2rem 4rem;
+    margin-bottom: 4rem;
+
+    // nav section 
+    nav {
+      @include flex(row, center, space-between, 3rem);
+      flex-wrap: wrap;
+      width: min(140rem, 100%);
+      margin-bottom: 3rem;
+
+      .logo {
+        width: min(12rem, 98%);
+      }
+    }
+
+    .hero-description-wrapper {
+      @include flex(column, center, center, 3rem);
+
+      .hero-description-header {
+        font-family: $fontFamilyPoppins;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 1.2;
+      }
+
+      .hero-description {
+        font-family: $fontFamilyOpenSans;
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.5;
+        width: min(60rem, 90%);
+
+        color: $veryDarkCyan;
+      }
+    }
+
+    .hero-img {
+      width: min(90rem, 100%);
+    }
+  }
+
+  // header ends here 
+
+  // stat container starts here 
+  .stats-container {
+    @include flex(column, center, center, 4rem);
+
+    .stat-component {
+      @include flex(column, flex-start, center, .5rem);
+
+      img {
+        width: min(3rem, 100%);
+      }
+
+      h2 {
+        font-size: 6rem;
+        font-family: $fontFamilyOpenSans;
+      }
+
+      p {
+        font-size: 1.4rem;
+        font-family: $fontFamilyOpenSans;
+        color: $veryDarkCyan;
+      }
+    }
+  }
+
+  // stat container ends here 
+
+  // features wrapper starts here
+  .features-wrapper {
+    @include flex(column, center, center, 4rem);
+    padding: 4rem 0;
+
+    .feature-component {
+      @include flex(column, center, center, 2rem);
+      padding: 2rem 4rem;
+
+      img {
+        width: min(40rem, 90%);
+      }
+
+      .feature-details {
+        @include flex(column, center, center, 2rem);
+        width: min(40rem, 90%);
+
+        h3 {
+          font-size: 2.4rem;
+          font-family: $fontFamilyPoppins;
+          text-align: center;
+        }
+
+        p {
+          font-size: 1.6rem;
+          font-family: $fontFamilyOpenSans;
+          color: $veryDarkCyan;
+          text-align: center;
+
+          width: min(60rem, 90%);
+        }
+      }
+    }
+
+    .feature-with-background {
+      @include flex(column, center, center, 0);
+
+      .feature-background {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .feature-component {
+        background-color: #f6fbff;
+      }
+    }
+  }
+
+  // features wrapper ends here 
+
+  // radey to build block starts here 
+  .ready-to-build-wrapper {
+    @include flex(column, center, center, 2rem);
+    padding: 2rem 4rem;
+    margin-bottom: 8rem;
+
+    h3 {
+      font-size: 2.4rem;
+      font-family: $fontFamilyPoppins;
+      text-align: center;
+    }
+  }
+
+  // radey to build block ends here 
+
+  // footer starts here 
+  footer {
+    @include flex(column, center, center, 0);
+
+    .footer-background {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    article {
+      @include flex(column, center, center, 0);
+      background: $veryDarkCyan;
+      width: 100%;
+
+      .news-letter-container {
+        @include flex(column, flex-start, center, 2rem);
+        padding: 2rem 4rem;
+        margin-bottom: 3rem;
+        width: min(60rem, 100%);
+
+        h3 {
+          font-size: 2.4rem;
+          font-family: $fontFamilyPoppins;
+          text-transform: uppercase;
+          color: $veryPaleBlue;
+        }
+
+        p {
+          font-size: 1.6rem;
+          font-family: $fontFamilyOpenSans;
+          color: $veryPaleBlue;
+          line-height: 1.5;
+          width: 100%;
+        }
+
+        form {
+          @include flex(column, flex-start, center, 1rem);
+          width: 100%;
+
+          input {
+            width: 100%;
+            height: 4rem;
+            border-radius: .4rem;
+            padding: 1rem;
+          }
+
+          button {
+            align-self: flex-end;
+            border-radius: .6rem;
+          }
+        }
+      }
+
+      .contact-container {
+        @include flex(column, flex-start, center, 3rem);
+        padding: 2rem 4rem;
+        width: min(60rem, 100%);
+
+        .footer-logo {
+          width: min(20rem, 90%);
+        }
+
+        .contact-desc {
+          font-size: 1.6rem;
+          font-family: $fontFamilyOpenSans;
+          color: $veryPaleBlue;
+          line-height: 1.5;
+          width: 100%;
+        }
+
+        .contacts-list {
+          @include flex(column, flex-start, center, 1.5rem);
+          margin-bottom: 4rem;
+
+          div {
+            @include flex(row, flex-start, center, 2rem);
+
+            p {
+              font-size: 1.6rem;
+              font-family: $fontFamilyOpenSans;
+              color: $veryPaleBlue;
+            }
+          }
+        }
+
+        .contact-icon-list {
+          @include flex(row, flex-start, center, 2rem);
+          margin-bottom: 4rem;
+
+          i {
+            transform: scale(1.4);
+            color: $veryPaleBlue;
+            cursor: pointer;
+            transition: $basic-transition;
+          }
+
+          i:hover {
+            color: $pink;
+          }
+        }
+      }
+    }
+  }
+
+  // footer ends here 
+}
+
+// media quaries 
+@media (min-width:$mobile) {
+  .main-container {
+    .stats-container {
+      @include flex(row, center, space-between, 4rem);
+      width: min(90rem, 90%);
+      margin: auto;
+    }
+  }
+}
+
+@media (min-width:$tablet) {
+  .main-container {
+    header {
+      .hero-description-wrapper {
+        .hero-description-header {
+          font-size: 4rem;
+        }
+      }
+    }
+
+    .stats-container {
+      .stat-component {
+        h2 {
+          font-size: 8rem;
+        }
+      }
+    }
+
+    .features-wrapper {
+      .feature-with-background {
+        .feature-component {
+          @include flex(row-reverse, center, center, 8rem);
+        }
+      }
+
+      .feature-component {
+        @include flex(row, center, center, 8rem);
+
+        .feature-details {
+          align-items: flex-start;
+          width: min(60rem);
+
+          h3,
+          p {
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    footer {
+      article {
+        @include flex(row-reverse, center, center, 4rem);
+      }
+    }
+  }
+}
+
+@media (min-width:$desktop) {}
